@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/ssvehicle" mode="merge"/>
+    <filter root="/content/ssvehicle" mode="merge"/>
+    <filter root="/content/dam/ssvehicle" mode="merge">
+        <exclude pattern="/content/dam/ssvehicle(/.*)?"/>
+        <include pattern="/content/dam/ssvehicle/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/ssvehicle/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/ssvehicle" mode="merge"/>
+</workspaceFilter>

@@ -1,0 +1,9 @@
+/* Brand A */
+.feature-tile--brand-a {
+    background-color: #000;
+    color: #fff;
+}
+
+.feature-tile--brand-a .feature-tile__cta {
+    color: #ffcc00;
+}

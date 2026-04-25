@@ -1,0 +1,24 @@
+<sly data-sly-use.model="com.ps.ss.client.core.models.VehicleFeatureTile" />
+
+<article class="feature-tile ${model.themeClass}" data-analytics-id="${model.title}">
+
+    <div class="feature-tile__icon">
+        <img src="${model.iconPath}"
+             alt="${model.decorativeIcon ? '' : model.iconAlt}"
+             aria-hidden="${model.decorativeIcon ? 'true' : 'false'}" />
+    </div>
+
+    <div class="feature-tile__content">
+        <h3 class="feature-tile__title">${model.title}</h3>
+        <p class="feature-tile__description">${model.description}</p>
+
+        <a data-sly-test="${model.hasCta}"
+           href="${model.ctaUrl}"
+           target="${model.ctaNewWindow ? '_blank' : '_self'}"
+           rel="${model.ctaNewWindow ? 'noopener' : ''}"
+           class="feature-tile__cta">
+            ${model.ctaLabel}
+        </a>
+    </div>
+
+</article>

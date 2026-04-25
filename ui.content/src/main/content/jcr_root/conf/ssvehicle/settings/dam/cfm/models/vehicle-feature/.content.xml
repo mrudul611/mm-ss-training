@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:dam="http://www.adobe.com/experience-manager/assets/1.0"
+    jcr:primaryType="cq:Page">
+
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="dam/cfm/models/console/components/data/entity"
+        cq:template="/libs/settings/dam/cfm/model-types/fragment"
+        jcr:title="Vehicle Feature Model"
+        description="Content Fragment Model for Vehicle Feature Tile">
+
+        <model
+            jcr:primaryType="nt:unstructured">
+
+            <fields jcr:primaryType="nt:unstructured">
+
+                <!-- Title -->
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dam/cfm/models/console/components/data/textfield"
+                    fieldLabel="Title"
+                    name="title"
+                    required="{Boolean}true"/>
+
+                <!-- Description -->
+                <description
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dam/cfm/models/console/components/data/textarea"
+                    fieldLabel="Description"
+                    name="description"/>
+
+                <!-- Icon -->
+                <icon
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dam/cfm/models/console/components/data/contentreference"
+                    fieldLabel="Icon"
+                    name="icon"
+                    rootPath="/content/dam"/>
+
+                <!-- CTA Label -->
+                <ctaLabel
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dam/cfm/models/console/components/data/textfield"
+                    fieldLabel="CTA Label"
+                    name="ctaLabel"/>
+
+                <!-- CTA URL -->
+                <ctaUrl
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dam/cfm/models/console/components/data/textfield"
+                    fieldLabel="CTA URL"
+                    name="ctaUrl"/>
+
+                <!-- CTA New Window -->
+                <ctaNewWindow
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dam/cfm/models/console/components/data/boolean"
+                    fieldLabel="Open in New Window"
+                    name="ctaNewWindow"/>
+
+                <!-- Icon Alt Override -->
+                <iconAltOverride
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dam/cfm/models/console/components/data/textfield"
+                    fieldLabel="Icon Alt Text Override"
+                    fieldDescription="Leave empty if icon is decorative"
+                    name="iconAltOverride"/>
+
+            </fields>
+
+        </model>
+
+    </jcr:content>
+</jcr:root>
